@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+:host {
+  display: block;
+  color: #f4f1eb;
+  background: #11100f;
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+}
+
+.section-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+.section-eyebrow,
+.eyebrow {
+  color: #d6a756;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  margin: 0 0 18px;
+}
+
+.section-header h2,
+.intro-content h2,
+.music-content h2,
+.booking-content h2 {
+  margin: 0;
+  color: #f4f1eb;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+}
+
+.section-header h2 span,
+.intro-content h2 span,
+.music-content h2 span,
+.booking-content h2 span {
+  color: #d6a756;
+}
+
+.gold-line {
+  width: 70px;
+  height: 4px;
+  background: #d6a756;
+  margin: 28px 0;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 28px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #d6a756;
+  color: #17120c;
+}
+
+.btn-primary:hover {
+  background: #f0c36f;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.65);
+  color: #fff;
+}
+
+.btn-outline:hover,
+.btn-outline-light:hover {
+  background: #fff;
+  color: #111;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d6a756;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+}
+
+.text-button span {
+  font-size: 1.3rem;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 8%;
+  overflow: hidden;
+
+  background:
+    url('/assets/images/state-line-hero.jpg')
+    center / cover no-repeat;
+
+  isolation: isolate;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 9, 8, 0.94) 0%,
+      rgba(10, 9, 8, 0.75) 42%,
+      rgba(10, 9, 8, 0.25) 100%
+    );
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #f5f2ec;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(5.5rem, 14vw, 11rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.78;
+}
+
+.hero h1 span {
+  display: block;
+  color: #d6a756;
+}
+
+.hero-divider {
+  width: 120px;
+  height: 5px;
+  margin: 35px 0;
+  background: #d6a756;
+}
+
+.hero h2 {
+  margin: 0 0 18px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.hero-description {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.hero-actions .btn span {
+  margin-left: 12px;
+  font-size: 1.2rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 8%;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: rgba(255, 255, 255, 0.55);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+}
+
+.scroll-line {
+  width: 70px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.intro {
+  padding: 130px 0;
+  background: #f0ede7;
+  color: #1b1916;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.intro-image {
+  position: relative;
+}
+
+.intro-image::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -25px;
+
+  width: 100%;
+  height: 100%;
+
+  border: 3px solid #d6a756;
+}
+
+.intro-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  min-height: 540px;
+  object-fit: cover;
+}
+
+.intro-content h2 {
+  color: #1b1916;
+}
+
+.intro-content p {
+  color: #55504a;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+
+/* ========================================
+   SHOWS
+======================================== */
+
+.shows-section {
+  padding: 120px 0;
+  overflow: hidden;
+  background: #181614;
+}
+
+.shows-background {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.08;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 48%,
+      #d6a756 49%,
+      #d6a756 51%,
+      transparent 52%
+    );
+  background-size: 45px 45px;
+}
+
+.shows-content {
+  position: relative;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.shows-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.show-card {
+  display: grid;
+  grid-template-columns: 130px 1fr auto;
+  align-items: center;
+  gap: 35px;
+
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: 0.25s ease;
+}
+
+.show-card:hover {
+  padding-left: 15px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.show-date {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.show-date .day {
+  color: #d6a756;
+  font-family: 'Anton', sans-serif;
+  font-size: 3.2rem;
+}
+
+.show-date .month {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.show-info h3 {
+  margin: 0 0 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+}
+
+.show-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+}
+
+.dot {
+  margin: 0 8px;
+  color: #d6a756;
+}
+
+.show-action button {
+  padding: 10px 0;
+
+  border: 0;
+  background: transparent;
+  color: #d6a756;
+
+  cursor: pointer;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.show-action span {
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+
+/* ========================================
+   MUSIC
+======================================== */
+
+.music-section {
+  padding: 130px 0;
+  background: #24201c;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.music-content > p:not(.section-eyebrow) {
+  max-width: 580px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.9;
+}
+
+.artist-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.artist-list span {
+  padding: 10px 14px;
+  border: 1px solid rgba(214, 167, 86, 0.45);
+
+  color: #d6a756;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.music-quote {
+  padding: 60px;
+  border-left: 5px solid #d6a756;
+  background: #11100f;
+}
+
+.quote-mark {
+  color: #d6a756;
+  font-family: Georgia, serif;
+  font-size: 7rem;
+  line-height: 0.7;
+}
+
+.music-quote h3 {
+  margin: 30px 0;
+
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.quote-line {
+  width: 60px;
+  height: 3px;
+  background: #d6a756;
+}
+
+.music-quote p {
+  margin-top: 20px;
+  color: #d6a756;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+
+/* ========================================
+   GALLERY
+======================================== */
+
+.gallery-section {
+  padding: 120px 0;
+  background: #f0ede7;
+}
+
+.gallery-section h2 {
+  color: #1b1916;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  gap: 14px;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+
+/* ========================================
+   BOOKING
+======================================== */
+
+.booking-section {
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px;
+
+  text-align: center;
+
+  background:
+    url('/assets/images/state-line-booking.jpg')
+    center / cover no-repeat;
+}
+
+.booking-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(10, 8, 6, 0.82);
+}
+
+.booking-content {
+  position: relative;
+  max-width: 800px;
+}
+
+.booking-content p:not(.section-eyebrow) {
+  max-width: 650px;
+  margin: 30px auto;
+
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.9;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  background: #0b0a09;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 65px 0;
+}
+
+.footer-brand h2 {
+  margin: 0 0 12px;
+
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.footer-brand h2 span {
+  color: #d6a756;
+}
+
+.footer-brand p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.65);
+
+  text-decoration: none;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.footer-links a:hover {
+  color: #d6a756;
+}
+
+.footer-bottom {
+  padding: 22px 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .intro-grid,
+  .music-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .intro-image {
+    max-width: 650px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .section-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .hero {
+    padding: 100px 8% 80px;
+    min-height: 800px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.5rem, 23vw, 8rem);
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .show-card {
+    grid-template-columns: 90px 1fr;
+    gap: 20px;
+  }
+
+  .show-action {
+    display: none;
+  }
+
+  .show-date .day {
+    font-size: 2.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+
+  .gallery-item.large,
+  .gallery-item.wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .music-quote {
+    padding: 40px 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions,
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn,
+  .booking-actions .btn {
+    width: 100%;
+  }
+
+  .intro,
+  .shows-section,
+  .music-section,
+  .gallery-section {
+    padding: 85px 0;
+  }
+}

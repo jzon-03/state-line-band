@@ -1,0 +1,333 @@
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">
+      ROCHESTER, NEW YORK
+    </p>
+
+    <h1>
+      STATE
+      <span>LINE</span>
+    </h1>
+
+    <div class="hero-divider"></div>
+
+    <h2>MODERN COUNTRY. LIVE & LOUD.</h2>
+
+    <p class="hero-description">
+      Bringing the biggest modern country hits, high-energy performances,
+      and a party you won't forget.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary" (click)="scrollToShows()">
+        SEE UPCOMING SHOWS
+        <span>↓</span>
+      </button>
+
+      <button class="btn btn-outline" (click)="scrollToBooking()">
+        BOOK THE BAND
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>SCROLL TO EXPLORE</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- INTRO -->
+<section class="intro" id="music">
+  <div class="section-container intro-grid">
+
+    <div class="intro-image">
+      <!-- Replace with actual State Line band photo -->
+      <img
+        src="/images/state-line-band.jpg"
+        alt="State Line performing live"
+      >
+    </div>
+
+    <div class="intro-content">
+      <p class="section-eyebrow">
+        ABOUT THE BAND
+      </p>
+
+      <h2>
+        COUNTRY MUSIC
+        <span>WITH A LITTLE MORE GAS.</span>
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <p>
+        State Line is a modern country cover band from Rochester, New York.
+        From today's biggest country hits to crowd-favorite anthems,
+        State Line brings the energy and keeps the party moving.
+      </p>
+
+      <p>
+        Whether it's a packed bar, festival stage, private event, or
+        a night out with friends, get ready to sing along, dance,
+        and turn it up.
+      </p>
+
+      <button class="text-button" (click)="scrollToBooking()">
+        WANT STATE LINE AT YOUR EVENT?
+        <span>→</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SHOWS -->
+<section class="shows-section" id="shows">
+
+  <div class="shows-background"></div>
+
+  <div class="section-container shows-content">
+
+    <div class="section-header">
+      <div>
+        <p class="section-eyebrow">COME SEE US LIVE</p>
+        <h2>UPCOMING <span>SHOWS</span></h2>
+      </div>
+
+      <button class="btn btn-outline-light">
+        VIEW ALL SHOWS
+      </button>
+    </div>
+
+    <div class="shows-list">
+
+      <article
+        class="show-card"
+        *ngFor="let show of shows"
+      >
+
+        <div class="show-date">
+          <span class="day">{{ show.date }}</span>
+          <span class="month">{{ show.month }}</span>
+        </div>
+
+        <div class="show-info">
+          <h3>{{ show.venue }}</h3>
+
+          <p>
+            {{ show.location }}
+            <span class="dot">•</span>
+            {{ show.time }}
+          </p>
+        </div>
+
+        <div class="show-action">
+          <button>
+            DETAILS
+            <span>→</span>
+          </button>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- MUSIC -->
+<section class="music-section">
+
+  <div class="section-container music-grid">
+
+    <div class="music-content">
+      <p class="section-eyebrow">
+        THE SOUNDTRACK
+      </p>
+
+      <h2>
+        YOUR FAVORITE
+        <span>COUNTRY HITS.</span>
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <p>
+        Modern country, country rock, sing-along favorites and the songs
+        that keep the dance floor full all night long.
+      </p>
+
+      <div class="artist-list">
+        <span>LUKE COMBS</span>
+        <span>MORGAN WALLEN</span>
+        <span>JELLY ROLL</span>
+        <span>CHRIS STAPLETON</span>
+        <span>LAINEY WILSON</span>
+        <span>AND MORE</span>
+      </div>
+    </div>
+
+    <div class="music-quote">
+      <div class="quote-mark">“</div>
+
+      <h3>
+        TURN IT UP.<br>
+        SING IT LOUD.<br>
+        LET'S GO.
+      </h3>
+
+      <div class="quote-line"></div>
+
+      <p>STATE LINE</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery-section">
+
+  <div class="section-container">
+
+    <div class="section-header gallery-header">
+      <div>
+        <p class="section-eyebrow">STATE LINE IN ACTION</p>
+        <h2>LIVE <span>LOUD.</span></h2>
+      </div>
+
+      <a
+        href="https://www.facebook.com/statelinemoderncountry"
+        target="_blank"
+        class="text-button"
+      >
+        FOLLOW ON FACEBOOK
+        <span>↗</span>
+      </a>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item large">
+        <img
+          src="images/gallery-1.jpg"
+          alt="State Line live performance"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="images/gallery-2.jpg"
+          alt="State Line country band"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="images/gallery-3.jpg"
+          alt="State Line performing"
+        >
+      </div>
+
+      <div class="gallery-item wide">
+        <img
+          src="images/gallery-4.jpg"
+          alt="State Line live on stage"
+        >
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BOOKING CTA -->
+<section class="booking-section" id="booking">
+
+  <div class="booking-overlay"></div>
+
+  <div class="booking-content">
+
+    <p class="section-eyebrow">
+      BRING THE PARTY TO YOU
+    </p>
+
+    <h2>
+      LET'S MAKE YOUR
+      <span>EVENT LOUD.</span>
+    </h2>
+
+    <p>
+      Bars. Festivals. Private Parties. Corporate Events.
+      Weddings. Wherever there's a crowd ready for country music.
+    </p>
+
+    <div class="booking-actions">
+      <a
+        href="mailto:YOURBOOKINGEMAIL@example.com"
+        class="btn btn-primary"
+      >
+        BOOK STATE LINE
+      </a>
+
+      <a
+        href="https://www.facebook.com/statelinemoderncountry"
+        target="_blank"
+        class="btn btn-outline-light"
+      >
+        MESSAGE US ON FACEBOOK
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="section-container footer-content">
+
+    <div class="footer-brand">
+      <h2>STATE <span>LINE</span></h2>
+
+      <p>
+        Modern Country Cover Band<br>
+        Rochester, New York
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#shows">SHOWS</a>
+      <a href="#booking">BOOKING</a>
+
+      <a
+        href="https://www.facebook.com/statelinemoderncountry"
+        target="_blank"
+      >
+        FACEBOOK
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>
+      © {{ 2026 }} STATE LINE. ALL RIGHTS RESERVED.
+    </span>
+    <span class="footer-credit">
+      Site by <a href="https://itsme.thepracticalapps.com" target="_blank" rel="noreferrer">The Practical Apps</a>
+    </span>
+  </div>
+
+</footer>
