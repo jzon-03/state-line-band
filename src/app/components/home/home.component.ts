@@ -16,6 +16,7 @@ interface Show {
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
+  currentYear: number = new Date().getFullYear();
 shows: Show[] = [
     {
       date: '12',
