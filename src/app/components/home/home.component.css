@@ -154,7 +154,7 @@ a {
   overflow: hidden;
 
   background:
-    url('/assets/images/state-line-hero.jpg')
+    url('/images/state-line-hero.jpg')
     center / cover no-repeat;
 
   isolation: isolate;
@@ -561,7 +561,7 @@ a {
   text-align: center;
 
   background:
-    url('/assets/images/state-line-booking.jpg')
+    url('/images/state-line-booking.jpg')
     center / cover no-repeat;
 }
 
